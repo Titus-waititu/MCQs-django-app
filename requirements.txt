@@ -2,3 +2,4 @@ django
 django_extensions
 pillow
 whitenoise
+gunicorn
