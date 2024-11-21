@@ -3,3 +3,4 @@ django_extensions
 pillow
 whitenoise
 gunicorn
+rest_framework
