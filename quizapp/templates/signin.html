@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <style>
+        .error {
+            color: red;
+        }
+        .success {
+            color: green;  
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Display messages -->
+    {% if messages %}
+        <div>
+            {% for message in messages %}
+                <p>
+                    {{ message }}
+                </p>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    <!-- Content -->
+    <form method="POST">
+        {% csrf_token %}
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username">
+        <br>
+        <label for="pass1">Password:</label>
+        <input type="password" id="pass1" name="pass1">
+        <br>
+        <button type="submit">Sign In</button>
+    </form>
+</body>
+</html>

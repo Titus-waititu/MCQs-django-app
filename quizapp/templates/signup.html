@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+</head>
+<body>
+
+<!-- <form action="" method="get">
+    <input type="text" placeholder="search..." name="search">
+    <button type="submit">search</button>
+</form>
+{% if results %}
+
+    <h1>Search restlts for: {{query}}</h1>
+    {% for data  in results %}
+    <p>Username: {{data.username}}</p>
+    <p>First Name: {{data.fname}}</p>
+    <p>Last Name: {{data.lname}}</p>
+    <p>Email: {{data.email}}</p>
+    {% endfor %}
+    {% else %}
+    <p>No data matching the word: {{query}}</p>
+{% endif %} -->
+
+    <form action="/signup/" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <input type="text" placeholder="Username" name="username" required>
+        <input type="text" placeholder="First Name" name="fname" required>
+        <input type="text" placeholder="Last Name" name="lname" required>
+        <input type="email" placeholder="Email" name="email" required>
+        <input type="password" placeholder="Create a password" name="pass1" required>
+        <input type="password" placeholder="Confirm password" name="pass2" required>
+        <button type="submit">Submit</button>
+    </form>
+    
+</body>
+</html>
